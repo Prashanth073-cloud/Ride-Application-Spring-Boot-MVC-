@@ -1,0 +1,33 @@
+form {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+}
+
+.heading {
+	text-align: center;
+}
+
+.btn-primary {
+	margin-top: 2%;
+}
+
+.col-md-4 {
+	margin: 0;
+	padding: 0;
+}
+
+.sin {
+	border-radius: 0.5%;
+	margin-bottom: 1%;
+}
+
+.dateOfBirth {
+	margin-bottom: 1%;
+}
+
+span {
+	font-size: 1em;
+	color: red;
+}
+
