@@ -1,0 +1,43 @@
+.parent {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.title {
+	text-align: center;
+	color:#FFA833;
+}
+
+.btn-primary {
+	width: 50%;
+	margin-top: 3%;
+}
+
+.custom-checkbox {
+	margin-top: 3%;
+}
+
+.footer h3 {
+	position: fixed;
+	left: 80%;
+	bottom: 0;
+	margin-bottom: 2%;
+}
+
+.addWork {
+	bottom:0;
+	position: fixed;
+	left: 3%;
+	FFA833
+}
+
+.textArea{
+	
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	margin-top: 2%;
+}

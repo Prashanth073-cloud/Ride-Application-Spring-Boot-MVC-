@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/resources/css/homework.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/resources/js/homeWork.js"></script>
+
+<title>Ride Application</title>
+</head>
+<body>
+	<main>
+		<h1 class="title">Update your work</h1>
+		<a th:href=@{friendsWork} class="addWork"><h3>Add work items</h3></a>
+		<div class="parent">
+
+			<form method="post" action="#" th:action=@{/thankYou}>
+			
+			<div class="date">
+			<label for="date">Birthday:</label>
+			<input type="date" id="date" name="date"/>
+			</div>
+
+				<div class="custom-control custom-checkbox">
+
+					<label class="custom-control-label" for="defaultUnchecked">Washed
+						Utensils</label> <input type="checkbox" class="custom-control-input"
+						id="defaultUnchecked">
+				</div>
+				<div class="custom-control custom-checkbox">
+					<label class="custom-control-label" for="defaultUnchecked">Cooked
+						Rice</label> <input type="checkbox" class="custom-control-input"
+						id="defaultUnchecked">
+				</div>
+				<div class="custom-control custom-checkbox">
+					<label class="custom-control-label" for="defaultUnchecked">Prepared
+						Curry</label> <input type="checkbox" class="custom-control-input"
+						id="defaultUnchecked">
+				</div>
+				<div class="custom-control custom-checkbox">
+					<label class="custom-control-label" for="defaultUnchecked">Others</label>
+					<input type="checkbox" class="custom-control-input"
+						id="defaultUnchecked" onchange='checkBoxStateChange(this)'>
+				</div>
+				<div class="textArea">
+					<textarea id="otherWorkTA" wrap="physical" name="otherWork" rows="4" cols="50" 
+						placeholder="Please enter your other works" style="display: none;"></textarea>
+				</div>
+				<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+			</form>
+
+			<div class="footer">
+			
+				<a th:href=@{friendsList}><h3>View Friends Work</h3></a>
+			</div>
+		</div>
+
+
+	</main>
+</body>
+</html>

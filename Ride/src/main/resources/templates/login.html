@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/resources/js/index.js"></script>
+<link rel="stylesheet" href="/resources/css/login.css" />
+<script type="text/javascript" src="/resources/js/index.js"></script>
+<title>Ride Application</title>
+</head>
+<body>
+	<main>
+
+		<div class="sidenav">
+			<div class="login-main-text">
+				<h2>
+					Application<br> Login Page
+				</h2>
+				<p>Login or register from here to access.</p>
+			</div>
+		</div>
+		<div class="main">
+			<div class="col-md-6 col-sm-12">
+				<div class="login-form">
+					<form action="#" method="post" th:action=@{/updateWork}>
+						<div class="form-group">
+							<label for="Email">Email</label> <input type="email"
+								class="form-control" id="Email" name="emailAddress"
+								aria-describedby="emailHelp" placeholder="Enter email" required />
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label> <input type="password"
+								id="password" name="password" class="form-control"
+								placeholder="Password" required>
+						</div>
+						<button id="submit" type="submit" class="btn btn-black">Login</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
