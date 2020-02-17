@@ -3,6 +3,8 @@ package com.carride.ride.controller;
 import java.util.ArrayList;
 import java.util.Set;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -90,7 +92,8 @@ public class RideController {
 	}
 
 	@RequestMapping("/updateWork")
-	public String getIndexPage(@RequestParam("emailAddress") String email, @RequestParam("password") String password) {
+	public String getIndexPage(@RequestParam("emailAddress") String email, @RequestParam("password") String password,
+			HttpSession session) {
 		ArrayList<UserDetails> userDetailsList = userDetailsRepository.getUserDetails();
 
 		UserDetails userDetails = userDetailsList.stream()
@@ -99,16 +102,27 @@ public class RideController {
 				.findAny().orElse(null);
 
 		if (userDetails != null) {
-			System.out.println("-------------" + AES.decrypt(userDetails.getEmailAddress(), Constants.SECRET_KEY));
-			groupName=userDetails.getGroupName();
+
+			session.setAttribute("email", userDetails.getEmailAddress()); // storing
+																			// email
+			System.out.println("---------------" + session.getAttribute("email")); // in
+			// session
+			session.setAttribute("groupName", userDetails.getGroupName()); // storing
+																			// groupname
+																			// in
+																			// session
 		}
 		return "houseWork";
 	}
-
+	
 	@RequestMapping("/friendsList")
-	public String getFriendsWorkPage() {
-		System.out.println("group name-----------------------------------------" + groupName);
+	public String getFriendsList() {
+		System.out.println("-------------------freindsList method---------------------");
 		return "friendsList";
 	}
 
+	@RequestMapping("/register")
+	public String getRegisterPage() {
+		return "register";
+	}
 }
